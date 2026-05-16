@@ -2,6 +2,7 @@ import { createMockLapTimes, createMockTelemetry, drivers, getMockDriverSummary,
 
 const OPENF1_BASE_URL = "https://api.openf1.org/v1";
 const CACHE_URL = "/openf1-2026-cache.json";
+const CANCELED_2026_MEETINGS = new Set(["Bahrain Grand Prix", "Saudi Arabian Grand Prix"]);
 let cachedSeasonData;
 
 // Dashboard selectors use the local 2026 cache. Past sessions get local sample
@@ -85,7 +86,7 @@ async function getSeasonData() {
 
     cachedSeasonData = {
       drivers: cache.drivers?.length ? cache.drivers : drivers,
-      sessions: cache.sessions?.length ? cache.sessions : sessions,
+      sessions: cache.sessions?.length ? removeCanceledSessions(cache.sessions) : sessions,
     };
   } catch (error) {
     cachedSeasonData = { drivers, sessions };
@@ -134,6 +135,10 @@ function findDriver(driverId, driverOptions) {
 
 function findSession(sessionId, sessionOptions) {
   return sessionOptions.find((item) => item.id === sessionId) ?? sessions.find((item) => item.id === sessionId) ?? sessions[0];
+}
+
+function removeCanceledSessions(sessionOptions) {
+  return sessionOptions.filter((session) => !CANCELED_2026_MEETINGS.has(session.name));
 }
 
 function wait(milliseconds) {
