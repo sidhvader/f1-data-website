@@ -1,5 +1,5 @@
 import React from "react";
-import { Activity, AlertTriangle, Flag, Gauge, RefreshCw } from "lucide-react";
+import { Activity, AlertTriangle, CalendarClock, Flag, Gauge, RefreshCw } from "lucide-react";
 import { useEffect, useState } from "react";
 import { getDashboardData, getDrivers, getSessions } from "./api/openF1Api";
 import LapTimesPanel from "./components/LapTimesPanel";
@@ -57,6 +57,8 @@ export default function App() {
   const telemetry = dashboardData?.telemetry ?? [];
   const lapTimes = dashboardData?.lapTimes ?? [];
   const dataStatus = dashboardData?.dataStatus;
+  const sessionStatus = dashboardData?.sessionStatus;
+  const hasChartData = telemetry.length > 0 && lapTimes.length > 0;
 
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,#2a1112,#0c0d10_38%,#07080a_100%)] text-f1-silver">
@@ -128,7 +130,7 @@ export default function App() {
               <StatCard label="Driver" value={driver.name} accent={driver.color} />
               <StatCard label="Team" value={driver.team} />
               <StatCard label="Fastest Lap" value={summary.fastestLap} />
-              <StatCard label="Max Speed" value={`${summary.maxSpeed} km/h`} />
+              <StatCard label="Max Speed" value={summary.maxSpeed ? `${summary.maxSpeed} km/h` : "--"} />
               <StatCard label="Session" value={`${session.type}, ${session.location}`} />
             </section>
 
@@ -137,38 +139,51 @@ export default function App() {
               <p className="mt-2 text-sm text-slate-200">
                 Driver and session list: static 2026 cache. Charts: {dataStatus?.source}.
               </p>
+              <p className="mt-1 text-sm text-slate-300">{sessionStatus?.message}</p>
             </section>
 
-            <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-              <TelemetryChart
-                title="Speed Over Time"
-                data={telemetry}
-                yAxisLabel="km/h"
-                lines={[{ key: "speed", name: "Speed", color: "#e10600" }]}
-              />
-              <TelemetryChart
-                title="Throttle and Brake Over Time"
-                data={telemetry}
-                yAxisLabel="%"
-                lines={[
-                  { key: "throttle", name: "Throttle", color: "#22c55e" },
-                  { key: "brake", name: "Brake", color: "#facc15" },
-                ]}
-              />
-            </section>
+            {hasChartData ? (
+              <>
+                <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+                  <TelemetryChart
+                    title="Speed Over Time"
+                    data={telemetry}
+                    yAxisLabel="km/h"
+                    lines={[{ key: "speed", name: "Speed", color: "#e10600" }]}
+                  />
+                  <TelemetryChart
+                    title="Throttle and Brake Over Time"
+                    data={telemetry}
+                    yAxisLabel="%"
+                    lines={[
+                      { key: "throttle", name: "Throttle", color: "#22c55e" },
+                      { key: "brake", name: "Brake", color: "#facc15" },
+                    ]}
+                  />
+                </section>
 
-            <section className="grid gap-6 lg:grid-cols-[1fr_0.95fr]">
-              <TelemetryChart
-                title="Lap Times Per Lap"
-                data={lapTimes}
-                yAxisLabel="seconds"
-                xKey="lap"
-                xUnit=""
-                yDomain={["dataMin - 1", "dataMax + 1"]}
-                lines={[{ key: "lapTimeSeconds", name: "Lap Time", color: "#38bdf8" }]}
-              />
-              <LapTimesPanel lapTimes={lapTimes} />
-            </section>
+                <section className="grid gap-6 lg:grid-cols-[1fr_0.95fr]">
+                  <TelemetryChart
+                    title="Lap Times Per Lap"
+                    data={lapTimes}
+                    yAxisLabel="seconds"
+                    xKey="lap"
+                    xUnit=""
+                    yDomain={["dataMin - 1", "dataMax + 1"]}
+                    lines={[{ key: "lapTimeSeconds", name: "Lap Time", color: "#38bdf8" }]}
+                  />
+                  <LapTimesPanel lapTimes={lapTimes} />
+                </section>
+              </>
+            ) : (
+              <section className="flex items-center gap-4 rounded-lg border border-f1-border bg-f1-panel p-5 text-slate-200">
+                <CalendarClock className="text-f1-red" />
+                <div>
+                  <p className="font-bold text-white">{sessionStatus?.label}</p>
+                  <p className="mt-1 text-sm text-slate-300">{sessionStatus?.message}</p>
+                </div>
+              </section>
+            )}
 
             <section className="grid gap-4 rounded-lg border border-f1-border bg-black/25 p-4 sm:grid-cols-3">
               <div className="flex items-center gap-3">
@@ -182,7 +197,7 @@ export default function App() {
                 <Activity className="text-green-400" />
                 <div>
                   <p className="text-xs uppercase tracking-wide text-slate-400">Data Points</p>
-                  <p className="font-bold text-white">{telemetry.length}</p>
+                  <p className="font-bold text-white">{hasChartData ? telemetry.length : "--"}</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">

@@ -4,14 +4,34 @@ const OPENF1_BASE_URL = "https://api.openf1.org/v1";
 const CACHE_URL = "/openf1-2026-cache.json";
 let cachedSeasonData;
 
-// Dashboard selectors use the local 2026 cache. Chart data is generated locally
-// so every driver/session always has beginner-friendly sample data.
+// Dashboard selectors use the local 2026 cache. Past sessions get local sample
+// chart data; future sessions are schedule-only so the app does not pretend
+// real telemetry exists before a race weekend happens.
 export async function getDashboardData(driverId, sessionId) {
   await wait(500);
 
   const seasonData = await getSeasonData();
   const driver = findDriver(driverId, seasonData.drivers);
   const session = findSession(sessionId, seasonData.sessions);
+  const sessionStatus = getSessionStatus(session);
+
+  if (sessionStatus.type === "future") {
+    return {
+      driver,
+      session,
+      summary: {
+        fastestLap: "--",
+        maxSpeed: null,
+      },
+      telemetry: [],
+      lapTimes: [],
+      dataStatus: {
+        source: "Schedule only",
+      },
+      sessionStatus,
+    };
+  }
+
   const telemetry = createMockTelemetry(driver.id);
   const lapTimes = createMockLapTimes(driver.id, session);
   const summary = getMockDriverSummary(driver.id);
@@ -29,6 +49,7 @@ export async function getDashboardData(driverId, sessionId) {
     dataStatus: {
       source: "Local sample telemetry and lap times",
     },
+    sessionStatus,
   };
 }
 
@@ -79,6 +100,32 @@ function getFastestLap(lapTimes) {
   }, lapTimes[0]);
 
   return fastestLap?.lapTime ?? "--";
+}
+
+function getSessionStatus(session) {
+  const startDate = session.dateStart ? new Date(session.dateStart) : null;
+
+  if (startDate && startDate.getTime() > Date.now()) {
+    return {
+      type: "future",
+      label: "Future session",
+      message: `This session starts on ${formatDate(startDate)}. Real telemetry and lap times are not available yet.`,
+    };
+  }
+
+  return {
+    type: "sample",
+    label: "Sample data",
+    message: "This dashboard is showing local sample telemetry and lap times for this completed or undated session.",
+  };
+}
+
+function formatDate(date) {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(date);
 }
 
 function findDriver(driverId, driverOptions) {
