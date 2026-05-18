@@ -1,0 +1,47 @@
+name: Update completed F1 sessions
+
+on:
+  schedule:
+    - cron: "15 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-sessions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update OpenF1 session cache
+        run: npm run update:sessions
+
+      - name: Verify build
+        run: npm run build
+
+      - name: Commit updated cache
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update completed F1 sessions"
+          file_pattern: public/openf1-2026-cache.json
+
+      - name: Trigger Netlify deploy hook
+        env:
+          NETLIFY_DEPLOY_HOOK_URL: ${{ secrets.NETLIFY_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -n "$NETLIFY_DEPLOY_HOOK_URL" ]; then
+            curl -X POST "$NETLIFY_DEPLOY_HOOK_URL"
+          else
+            echo "No Netlify deploy hook configured."
+          fi

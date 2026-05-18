@@ -2,7 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-05-16T18:18:16.711Z",
+  "updatedAt": "2026-05-18T02:07:29.919Z",
+  "completedSessionCount": 26,
   "sessions": [
     {
       "id": "11465",
@@ -13,7 +14,8 @@
       "location": "Bahrain",
       "country": "Bahrain",
       "dateStart": "2026-02-11T07:00:00+00:00",
-      "dateEnd": "2026-02-11T16:00:00+00:00"
+      "dateEnd": "2026-02-11T16:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11466",
@@ -24,7 +26,8 @@
       "location": "Bahrain",
       "country": "Bahrain",
       "dateStart": "2026-02-12T07:00:00+00:00",
-      "dateEnd": "2026-02-12T16:00:00+00:00"
+      "dateEnd": "2026-02-12T16:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11467",
@@ -35,7 +38,8 @@
       "location": "Bahrain",
       "country": "Bahrain",
       "dateStart": "2026-02-13T07:00:00+00:00",
-      "dateEnd": "2026-02-13T16:00:00+00:00"
+      "dateEnd": "2026-02-13T16:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11470",
@@ -46,7 +50,8 @@
       "location": "Bahrain",
       "country": "Bahrain",
       "dateStart": "2026-02-18T07:00:00+00:00",
-      "dateEnd": "2026-02-18T16:00:00+00:00"
+      "dateEnd": "2026-02-18T16:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11469",
@@ -57,7 +62,8 @@
       "location": "Bahrain",
       "country": "Bahrain",
       "dateStart": "2026-02-19T07:00:00+00:00",
-      "dateEnd": "2026-02-19T16:00:00+00:00"
+      "dateEnd": "2026-02-19T16:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11468",
@@ -68,7 +74,8 @@
       "location": "Bahrain",
       "country": "Bahrain",
       "dateStart": "2026-02-20T07:00:00+00:00",
-      "dateEnd": "2026-02-20T16:00:00+00:00"
+      "dateEnd": "2026-02-20T16:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11227",
@@ -79,7 +86,8 @@
       "location": "Melbourne",
       "country": "Australia",
       "dateStart": "2026-03-06T01:30:00+00:00",
-      "dateEnd": "2026-03-06T02:30:00+00:00"
+      "dateEnd": "2026-03-06T02:30:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11228",
@@ -90,7 +98,8 @@
       "location": "Melbourne",
       "country": "Australia",
       "dateStart": "2026-03-06T05:00:00+00:00",
-      "dateEnd": "2026-03-06T06:00:00+00:00"
+      "dateEnd": "2026-03-06T06:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11229",
@@ -101,7 +110,8 @@
       "location": "Melbourne",
       "country": "Australia",
       "dateStart": "2026-03-07T01:30:00+00:00",
-      "dateEnd": "2026-03-07T02:30:00+00:00"
+      "dateEnd": "2026-03-07T02:30:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11230",
@@ -112,7 +122,8 @@
       "location": "Melbourne",
       "country": "Australia",
       "dateStart": "2026-03-07T05:00:00+00:00",
-      "dateEnd": "2026-03-07T06:00:00+00:00"
+      "dateEnd": "2026-03-07T06:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11234",
@@ -123,7 +134,8 @@
       "location": "Melbourne",
       "country": "Australia",
       "dateStart": "2026-03-08T04:00:00+00:00",
-      "dateEnd": "2026-03-08T06:00:00+00:00"
+      "dateEnd": "2026-03-08T06:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11235",
@@ -134,7 +146,8 @@
       "location": "Shanghai",
       "country": "China",
       "dateStart": "2026-03-13T03:30:00+00:00",
-      "dateEnd": "2026-03-13T04:30:00+00:00"
+      "dateEnd": "2026-03-13T04:30:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11236",
@@ -145,7 +158,8 @@
       "location": "Shanghai",
       "country": "China",
       "dateStart": "2026-03-13T07:30:00+00:00",
-      "dateEnd": "2026-03-13T08:14:00+00:00"
+      "dateEnd": "2026-03-13T08:14:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11240",
@@ -156,7 +170,8 @@
       "location": "Shanghai",
       "country": "China",
       "dateStart": "2026-03-14T03:00:00+00:00",
-      "dateEnd": "2026-03-14T04:00:00+00:00"
+      "dateEnd": "2026-03-14T04:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11241",
@@ -167,7 +182,8 @@
       "location": "Shanghai",
       "country": "China",
       "dateStart": "2026-03-14T07:00:00+00:00",
-      "dateEnd": "2026-03-14T08:00:00+00:00"
+      "dateEnd": "2026-03-14T08:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11245",
@@ -178,7 +194,8 @@
       "location": "Shanghai",
       "country": "China",
       "dateStart": "2026-03-15T07:00:00+00:00",
-      "dateEnd": "2026-03-15T09:00:00+00:00"
+      "dateEnd": "2026-03-15T09:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11246",
@@ -189,7 +206,8 @@
       "location": "Suzuka",
       "country": "Japan",
       "dateStart": "2026-03-27T02:30:00+00:00",
-      "dateEnd": "2026-03-27T03:30:00+00:00"
+      "dateEnd": "2026-03-27T03:30:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11247",
@@ -200,7 +218,8 @@
       "location": "Suzuka",
       "country": "Japan",
       "dateStart": "2026-03-27T06:00:00+00:00",
-      "dateEnd": "2026-03-27T07:00:00+00:00"
+      "dateEnd": "2026-03-27T07:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11248",
@@ -211,7 +230,8 @@
       "location": "Suzuka",
       "country": "Japan",
       "dateStart": "2026-03-28T02:30:00+00:00",
-      "dateEnd": "2026-03-28T03:30:00+00:00"
+      "dateEnd": "2026-03-28T03:30:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11249",
@@ -222,7 +242,8 @@
       "location": "Suzuka",
       "country": "Japan",
       "dateStart": "2026-03-28T06:00:00+00:00",
-      "dateEnd": "2026-03-28T07:00:00+00:00"
+      "dateEnd": "2026-03-28T07:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11253",
@@ -233,117 +254,8 @@
       "location": "Suzuka",
       "country": "Japan",
       "dateStart": "2026-03-29T05:00:00+00:00",
-      "dateEnd": "2026-03-29T07:00:00+00:00"
-    },
-    {
-      "id": "11254",
-      "sessionKey": 11254,
-      "meetingKey": 1282,
-      "name": "Bahrain Grand Prix",
-      "type": "Practice 1",
-      "location": "Sakhir",
-      "country": "Bahrain",
-      "dateStart": "2026-04-10T11:30:00+00:00",
-      "dateEnd": "2026-04-10T12:30:00+00:00"
-    },
-    {
-      "id": "11255",
-      "sessionKey": 11255,
-      "meetingKey": 1282,
-      "name": "Bahrain Grand Prix",
-      "type": "Practice 2",
-      "location": "Sakhir",
-      "country": "Bahrain",
-      "dateStart": "2026-04-10T15:00:00+00:00",
-      "dateEnd": "2026-04-10T16:00:00+00:00"
-    },
-    {
-      "id": "11256",
-      "sessionKey": 11256,
-      "meetingKey": 1282,
-      "name": "Bahrain Grand Prix",
-      "type": "Practice 3",
-      "location": "Sakhir",
-      "country": "Bahrain",
-      "dateStart": "2026-04-11T12:30:00+00:00",
-      "dateEnd": "2026-04-11T13:30:00+00:00"
-    },
-    {
-      "id": "11257",
-      "sessionKey": 11257,
-      "meetingKey": 1282,
-      "name": "Bahrain Grand Prix",
-      "type": "Qualifying",
-      "location": "Sakhir",
-      "country": "Bahrain",
-      "dateStart": "2026-04-11T16:00:00+00:00",
-      "dateEnd": "2026-04-11T17:00:00+00:00"
-    },
-    {
-      "id": "11261",
-      "sessionKey": 11261,
-      "meetingKey": 1282,
-      "name": "Bahrain Grand Prix",
-      "type": "Race",
-      "location": "Sakhir",
-      "country": "Bahrain",
-      "dateStart": "2026-04-12T15:00:00+00:00",
-      "dateEnd": "2026-04-12T17:00:00+00:00"
-    },
-    {
-      "id": "11262",
-      "sessionKey": 11262,
-      "meetingKey": 1283,
-      "name": "Saudi Arabian Grand Prix",
-      "type": "Practice 1",
-      "location": "Jeddah",
-      "country": "Saudi Arabia",
-      "dateStart": "2026-04-17T13:30:00+00:00",
-      "dateEnd": "2026-04-17T14:30:00+00:00"
-    },
-    {
-      "id": "11263",
-      "sessionKey": 11263,
-      "meetingKey": 1283,
-      "name": "Saudi Arabian Grand Prix",
-      "type": "Practice 2",
-      "location": "Jeddah",
-      "country": "Saudi Arabia",
-      "dateStart": "2026-04-17T17:00:00+00:00",
-      "dateEnd": "2026-04-17T18:00:00+00:00"
-    },
-    {
-      "id": "11264",
-      "sessionKey": 11264,
-      "meetingKey": 1283,
-      "name": "Saudi Arabian Grand Prix",
-      "type": "Practice 3",
-      "location": "Jeddah",
-      "country": "Saudi Arabia",
-      "dateStart": "2026-04-18T13:30:00+00:00",
-      "dateEnd": "2026-04-18T14:30:00+00:00"
-    },
-    {
-      "id": "11265",
-      "sessionKey": 11265,
-      "meetingKey": 1283,
-      "name": "Saudi Arabian Grand Prix",
-      "type": "Qualifying",
-      "location": "Jeddah",
-      "country": "Saudi Arabia",
-      "dateStart": "2026-04-18T17:00:00+00:00",
-      "dateEnd": "2026-04-18T18:00:00+00:00"
-    },
-    {
-      "id": "11269",
-      "sessionKey": 11269,
-      "meetingKey": 1283,
-      "name": "Saudi Arabian Grand Prix",
-      "type": "Race",
-      "location": "Jeddah",
-      "country": "Saudi Arabia",
-      "dateStart": "2026-04-19T17:00:00+00:00",
-      "dateEnd": "2026-04-19T19:00:00+00:00"
+      "dateEnd": "2026-03-29T07:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11270",
@@ -354,7 +266,8 @@
       "location": "Miami Gardens",
       "country": "United States",
       "dateStart": "2026-05-01T16:00:00+00:00",
-      "dateEnd": "2026-05-01T17:30:00+00:00"
+      "dateEnd": "2026-05-01T17:30:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11271",
@@ -365,7 +278,8 @@
       "location": "Miami Gardens",
       "country": "United States",
       "dateStart": "2026-05-01T20:30:00+00:00",
-      "dateEnd": "2026-05-01T21:14:00+00:00"
+      "dateEnd": "2026-05-01T21:14:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11275",
@@ -376,7 +290,8 @@
       "location": "Miami Gardens",
       "country": "United States",
       "dateStart": "2026-05-02T16:00:00+00:00",
-      "dateEnd": "2026-05-02T17:00:00+00:00"
+      "dateEnd": "2026-05-02T17:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11276",
@@ -387,7 +302,8 @@
       "location": "Miami Gardens",
       "country": "United States",
       "dateStart": "2026-05-02T20:00:00+00:00",
-      "dateEnd": "2026-05-02T21:00:00+00:00"
+      "dateEnd": "2026-05-02T21:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11280",
@@ -398,7 +314,8 @@
       "location": "Miami Gardens",
       "country": "United States",
       "dateStart": "2026-05-03T17:00:00+00:00",
-      "dateEnd": "2026-05-03T19:00:00+00:00"
+      "dateEnd": "2026-05-03T19:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11281",
@@ -409,7 +326,8 @@
       "location": "Montréal",
       "country": "Canada",
       "dateStart": "2026-05-22T16:30:00+00:00",
-      "dateEnd": "2026-05-22T17:30:00+00:00"
+      "dateEnd": "2026-05-22T17:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11282",
@@ -420,7 +338,8 @@
       "location": "Montréal",
       "country": "Canada",
       "dateStart": "2026-05-22T20:30:00+00:00",
-      "dateEnd": "2026-05-22T21:14:00+00:00"
+      "dateEnd": "2026-05-22T21:14:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11286",
@@ -431,7 +350,8 @@
       "location": "Montréal",
       "country": "Canada",
       "dateStart": "2026-05-23T16:00:00+00:00",
-      "dateEnd": "2026-05-23T17:00:00+00:00"
+      "dateEnd": "2026-05-23T17:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11287",
@@ -442,7 +362,8 @@
       "location": "Montréal",
       "country": "Canada",
       "dateStart": "2026-05-23T20:00:00+00:00",
-      "dateEnd": "2026-05-23T21:00:00+00:00"
+      "dateEnd": "2026-05-23T21:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11291",
@@ -453,7 +374,8 @@
       "location": "Montréal",
       "country": "Canada",
       "dateStart": "2026-05-24T20:00:00+00:00",
-      "dateEnd": "2026-05-24T22:00:00+00:00"
+      "dateEnd": "2026-05-24T22:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11292",
@@ -464,7 +386,8 @@
       "location": "Monte Carlo",
       "country": "Monaco",
       "dateStart": "2026-06-05T11:30:00+00:00",
-      "dateEnd": "2026-06-05T12:30:00+00:00"
+      "dateEnd": "2026-06-05T12:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11293",
@@ -475,7 +398,8 @@
       "location": "Monte Carlo",
       "country": "Monaco",
       "dateStart": "2026-06-05T15:00:00+00:00",
-      "dateEnd": "2026-06-05T16:00:00+00:00"
+      "dateEnd": "2026-06-05T16:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11294",
@@ -486,7 +410,8 @@
       "location": "Monte Carlo",
       "country": "Monaco",
       "dateStart": "2026-06-06T10:30:00+00:00",
-      "dateEnd": "2026-06-06T11:30:00+00:00"
+      "dateEnd": "2026-06-06T11:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11295",
@@ -497,7 +422,8 @@
       "location": "Monte Carlo",
       "country": "Monaco",
       "dateStart": "2026-06-06T14:00:00+00:00",
-      "dateEnd": "2026-06-06T15:00:00+00:00"
+      "dateEnd": "2026-06-06T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11299",
@@ -508,7 +434,8 @@
       "location": "Monte Carlo",
       "country": "Monaco",
       "dateStart": "2026-06-07T13:00:00+00:00",
-      "dateEnd": "2026-06-07T15:00:00+00:00"
+      "dateEnd": "2026-06-07T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11300",
@@ -519,7 +446,8 @@
       "location": "Barcelona",
       "country": "Spain",
       "dateStart": "2026-06-12T11:30:00+00:00",
-      "dateEnd": "2026-06-12T12:30:00+00:00"
+      "dateEnd": "2026-06-12T12:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11301",
@@ -530,7 +458,8 @@
       "location": "Barcelona",
       "country": "Spain",
       "dateStart": "2026-06-12T15:00:00+00:00",
-      "dateEnd": "2026-06-12T16:00:00+00:00"
+      "dateEnd": "2026-06-12T16:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11302",
@@ -541,7 +470,8 @@
       "location": "Barcelona",
       "country": "Spain",
       "dateStart": "2026-06-13T10:30:00+00:00",
-      "dateEnd": "2026-06-13T11:30:00+00:00"
+      "dateEnd": "2026-06-13T11:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11303",
@@ -552,7 +482,8 @@
       "location": "Barcelona",
       "country": "Spain",
       "dateStart": "2026-06-13T14:00:00+00:00",
-      "dateEnd": "2026-06-13T15:00:00+00:00"
+      "dateEnd": "2026-06-13T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11307",
@@ -563,7 +494,8 @@
       "location": "Barcelona",
       "country": "Spain",
       "dateStart": "2026-06-14T13:00:00+00:00",
-      "dateEnd": "2026-06-14T15:00:00+00:00"
+      "dateEnd": "2026-06-14T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11308",
@@ -574,7 +506,8 @@
       "location": "Spielberg",
       "country": "Austria",
       "dateStart": "2026-06-26T11:30:00+00:00",
-      "dateEnd": "2026-06-26T12:30:00+00:00"
+      "dateEnd": "2026-06-26T12:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11309",
@@ -585,7 +518,8 @@
       "location": "Spielberg",
       "country": "Austria",
       "dateStart": "2026-06-26T15:00:00+00:00",
-      "dateEnd": "2026-06-26T16:00:00+00:00"
+      "dateEnd": "2026-06-26T16:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11310",
@@ -596,7 +530,8 @@
       "location": "Spielberg",
       "country": "Austria",
       "dateStart": "2026-06-27T10:30:00+00:00",
-      "dateEnd": "2026-06-27T11:30:00+00:00"
+      "dateEnd": "2026-06-27T11:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11311",
@@ -607,7 +542,8 @@
       "location": "Spielberg",
       "country": "Austria",
       "dateStart": "2026-06-27T14:00:00+00:00",
-      "dateEnd": "2026-06-27T15:00:00+00:00"
+      "dateEnd": "2026-06-27T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11315",
@@ -618,7 +554,8 @@
       "location": "Spielberg",
       "country": "Austria",
       "dateStart": "2026-06-28T13:00:00+00:00",
-      "dateEnd": "2026-06-28T15:00:00+00:00"
+      "dateEnd": "2026-06-28T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11316",
@@ -629,7 +566,8 @@
       "location": "Silverstone",
       "country": "United Kingdom",
       "dateStart": "2026-07-03T11:30:00+00:00",
-      "dateEnd": "2026-07-03T12:30:00+00:00"
+      "dateEnd": "2026-07-03T12:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11317",
@@ -640,7 +578,8 @@
       "location": "Silverstone",
       "country": "United Kingdom",
       "dateStart": "2026-07-03T15:30:00+00:00",
-      "dateEnd": "2026-07-03T16:14:00+00:00"
+      "dateEnd": "2026-07-03T16:14:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11321",
@@ -651,7 +590,8 @@
       "location": "Silverstone",
       "country": "United Kingdom",
       "dateStart": "2026-07-04T11:00:00+00:00",
-      "dateEnd": "2026-07-04T12:00:00+00:00"
+      "dateEnd": "2026-07-04T12:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11322",
@@ -662,7 +602,8 @@
       "location": "Silverstone",
       "country": "United Kingdom",
       "dateStart": "2026-07-04T15:00:00+00:00",
-      "dateEnd": "2026-07-04T16:00:00+00:00"
+      "dateEnd": "2026-07-04T16:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11326",
@@ -673,7 +614,8 @@
       "location": "Silverstone",
       "country": "United Kingdom",
       "dateStart": "2026-07-05T14:00:00+00:00",
-      "dateEnd": "2026-07-05T16:00:00+00:00"
+      "dateEnd": "2026-07-05T16:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11327",
@@ -684,7 +626,8 @@
       "location": "Spa-Francorchamps",
       "country": "Belgium",
       "dateStart": "2026-07-17T11:30:00+00:00",
-      "dateEnd": "2026-07-17T12:30:00+00:00"
+      "dateEnd": "2026-07-17T12:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11328",
@@ -695,7 +638,8 @@
       "location": "Spa-Francorchamps",
       "country": "Belgium",
       "dateStart": "2026-07-17T15:00:00+00:00",
-      "dateEnd": "2026-07-17T16:00:00+00:00"
+      "dateEnd": "2026-07-17T16:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11329",
@@ -706,7 +650,8 @@
       "location": "Spa-Francorchamps",
       "country": "Belgium",
       "dateStart": "2026-07-18T10:30:00+00:00",
-      "dateEnd": "2026-07-18T11:30:00+00:00"
+      "dateEnd": "2026-07-18T11:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11330",
@@ -717,7 +662,8 @@
       "location": "Spa-Francorchamps",
       "country": "Belgium",
       "dateStart": "2026-07-18T14:00:00+00:00",
-      "dateEnd": "2026-07-18T15:00:00+00:00"
+      "dateEnd": "2026-07-18T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11334",
@@ -728,7 +674,8 @@
       "location": "Spa-Francorchamps",
       "country": "Belgium",
       "dateStart": "2026-07-19T13:00:00+00:00",
-      "dateEnd": "2026-07-19T15:00:00+00:00"
+      "dateEnd": "2026-07-19T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11335",
@@ -739,7 +686,8 @@
       "location": "Budapest",
       "country": "Hungary",
       "dateStart": "2026-07-24T11:30:00+00:00",
-      "dateEnd": "2026-07-24T12:30:00+00:00"
+      "dateEnd": "2026-07-24T12:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11336",
@@ -750,7 +698,8 @@
       "location": "Budapest",
       "country": "Hungary",
       "dateStart": "2026-07-24T15:00:00+00:00",
-      "dateEnd": "2026-07-24T16:00:00+00:00"
+      "dateEnd": "2026-07-24T16:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11337",
@@ -761,7 +710,8 @@
       "location": "Budapest",
       "country": "Hungary",
       "dateStart": "2026-07-25T10:30:00+00:00",
-      "dateEnd": "2026-07-25T11:30:00+00:00"
+      "dateEnd": "2026-07-25T11:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11338",
@@ -772,7 +722,8 @@
       "location": "Budapest",
       "country": "Hungary",
       "dateStart": "2026-07-25T14:00:00+00:00",
-      "dateEnd": "2026-07-25T15:00:00+00:00"
+      "dateEnd": "2026-07-25T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11342",
@@ -783,7 +734,8 @@
       "location": "Budapest",
       "country": "Hungary",
       "dateStart": "2026-07-26T13:00:00+00:00",
-      "dateEnd": "2026-07-26T15:00:00+00:00"
+      "dateEnd": "2026-07-26T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11343",
@@ -794,7 +746,8 @@
       "location": "Zandvoort",
       "country": "Netherlands",
       "dateStart": "2026-08-21T10:30:00+00:00",
-      "dateEnd": "2026-08-21T11:30:00+00:00"
+      "dateEnd": "2026-08-21T11:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11344",
@@ -805,7 +758,8 @@
       "location": "Zandvoort",
       "country": "Netherlands",
       "dateStart": "2026-08-21T14:30:00+00:00",
-      "dateEnd": "2026-08-21T15:14:00+00:00"
+      "dateEnd": "2026-08-21T15:14:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11348",
@@ -816,7 +770,8 @@
       "location": "Zandvoort",
       "country": "Netherlands",
       "dateStart": "2026-08-22T10:00:00+00:00",
-      "dateEnd": "2026-08-22T11:00:00+00:00"
+      "dateEnd": "2026-08-22T11:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11349",
@@ -827,7 +782,8 @@
       "location": "Zandvoort",
       "country": "Netherlands",
       "dateStart": "2026-08-22T14:00:00+00:00",
-      "dateEnd": "2026-08-22T15:00:00+00:00"
+      "dateEnd": "2026-08-22T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11353",
@@ -838,7 +794,8 @@
       "location": "Zandvoort",
       "country": "Netherlands",
       "dateStart": "2026-08-23T13:00:00+00:00",
-      "dateEnd": "2026-08-23T15:00:00+00:00"
+      "dateEnd": "2026-08-23T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11354",
@@ -849,7 +806,8 @@
       "location": "Monza",
       "country": "Italy",
       "dateStart": "2026-09-04T10:30:00+00:00",
-      "dateEnd": "2026-09-04T11:30:00+00:00"
+      "dateEnd": "2026-09-04T11:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11355",
@@ -860,7 +818,8 @@
       "location": "Monza",
       "country": "Italy",
       "dateStart": "2026-09-04T14:00:00+00:00",
-      "dateEnd": "2026-09-04T15:00:00+00:00"
+      "dateEnd": "2026-09-04T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11356",
@@ -871,7 +830,8 @@
       "location": "Monza",
       "country": "Italy",
       "dateStart": "2026-09-05T10:30:00+00:00",
-      "dateEnd": "2026-09-05T11:30:00+00:00"
+      "dateEnd": "2026-09-05T11:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11357",
@@ -882,7 +842,8 @@
       "location": "Monza",
       "country": "Italy",
       "dateStart": "2026-09-05T14:00:00+00:00",
-      "dateEnd": "2026-09-05T15:00:00+00:00"
+      "dateEnd": "2026-09-05T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11361",
@@ -893,7 +854,8 @@
       "location": "Monza",
       "country": "Italy",
       "dateStart": "2026-09-06T13:00:00+00:00",
-      "dateEnd": "2026-09-06T15:00:00+00:00"
+      "dateEnd": "2026-09-06T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11362",
@@ -904,7 +866,8 @@
       "location": "Madrid",
       "country": "Spain",
       "dateStart": "2026-09-11T11:30:00+00:00",
-      "dateEnd": "2026-09-11T12:30:00+00:00"
+      "dateEnd": "2026-09-11T12:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11363",
@@ -915,7 +878,8 @@
       "location": "Madrid",
       "country": "Spain",
       "dateStart": "2026-09-11T15:00:00+00:00",
-      "dateEnd": "2026-09-11T16:00:00+00:00"
+      "dateEnd": "2026-09-11T16:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11364",
@@ -926,7 +890,8 @@
       "location": "Madrid",
       "country": "Spain",
       "dateStart": "2026-09-12T10:30:00+00:00",
-      "dateEnd": "2026-09-12T11:30:00+00:00"
+      "dateEnd": "2026-09-12T11:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11365",
@@ -937,7 +902,8 @@
       "location": "Madrid",
       "country": "Spain",
       "dateStart": "2026-09-12T14:00:00+00:00",
-      "dateEnd": "2026-09-12T15:00:00+00:00"
+      "dateEnd": "2026-09-12T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11369",
@@ -948,7 +914,8 @@
       "location": "Madrid",
       "country": "Spain",
       "dateStart": "2026-09-13T13:00:00+00:00",
-      "dateEnd": "2026-09-13T15:00:00+00:00"
+      "dateEnd": "2026-09-13T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11370",
@@ -959,7 +926,8 @@
       "location": "Baku",
       "country": "Azerbaijan",
       "dateStart": "2026-09-24T08:30:00+00:00",
-      "dateEnd": "2026-09-24T09:30:00+00:00"
+      "dateEnd": "2026-09-24T09:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11371",
@@ -970,7 +938,8 @@
       "location": "Baku",
       "country": "Azerbaijan",
       "dateStart": "2026-09-24T12:00:00+00:00",
-      "dateEnd": "2026-09-24T13:00:00+00:00"
+      "dateEnd": "2026-09-24T13:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11372",
@@ -981,7 +950,8 @@
       "location": "Baku",
       "country": "Azerbaijan",
       "dateStart": "2026-09-25T08:30:00+00:00",
-      "dateEnd": "2026-09-25T09:30:00+00:00"
+      "dateEnd": "2026-09-25T09:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11373",
@@ -992,7 +962,8 @@
       "location": "Baku",
       "country": "Azerbaijan",
       "dateStart": "2026-09-25T12:00:00+00:00",
-      "dateEnd": "2026-09-25T13:00:00+00:00"
+      "dateEnd": "2026-09-25T13:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11377",
@@ -1003,7 +974,8 @@
       "location": "Baku",
       "country": "Azerbaijan",
       "dateStart": "2026-09-26T11:00:00+00:00",
-      "dateEnd": "2026-09-26T13:00:00+00:00"
+      "dateEnd": "2026-09-26T13:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11378",
@@ -1014,7 +986,8 @@
       "location": "Marina Bay",
       "country": "Singapore",
       "dateStart": "2026-10-09T08:30:00+00:00",
-      "dateEnd": "2026-10-09T09:30:00+00:00"
+      "dateEnd": "2026-10-09T09:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11379",
@@ -1025,7 +998,8 @@
       "location": "Marina Bay",
       "country": "Singapore",
       "dateStart": "2026-10-09T12:30:00+00:00",
-      "dateEnd": "2026-10-09T13:14:00+00:00"
+      "dateEnd": "2026-10-09T13:14:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11383",
@@ -1036,7 +1010,8 @@
       "location": "Marina Bay",
       "country": "Singapore",
       "dateStart": "2026-10-10T09:00:00+00:00",
-      "dateEnd": "2026-10-10T10:00:00+00:00"
+      "dateEnd": "2026-10-10T10:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11384",
@@ -1047,7 +1022,8 @@
       "location": "Marina Bay",
       "country": "Singapore",
       "dateStart": "2026-10-10T13:00:00+00:00",
-      "dateEnd": "2026-10-10T14:00:00+00:00"
+      "dateEnd": "2026-10-10T14:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11388",
@@ -1058,7 +1034,8 @@
       "location": "Marina Bay",
       "country": "Singapore",
       "dateStart": "2026-10-11T12:00:00+00:00",
-      "dateEnd": "2026-10-11T14:00:00+00:00"
+      "dateEnd": "2026-10-11T14:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11389",
@@ -1069,7 +1046,8 @@
       "location": "Austin",
       "country": "United States",
       "dateStart": "2026-10-23T17:30:00+00:00",
-      "dateEnd": "2026-10-23T18:30:00+00:00"
+      "dateEnd": "2026-10-23T18:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11390",
@@ -1080,7 +1058,8 @@
       "location": "Austin",
       "country": "United States",
       "dateStart": "2026-10-23T21:00:00+00:00",
-      "dateEnd": "2026-10-23T22:00:00+00:00"
+      "dateEnd": "2026-10-23T22:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11391",
@@ -1091,7 +1070,8 @@
       "location": "Austin",
       "country": "United States",
       "dateStart": "2026-10-24T17:30:00+00:00",
-      "dateEnd": "2026-10-24T18:30:00+00:00"
+      "dateEnd": "2026-10-24T18:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11392",
@@ -1102,7 +1082,8 @@
       "location": "Austin",
       "country": "United States",
       "dateStart": "2026-10-24T21:00:00+00:00",
-      "dateEnd": "2026-10-24T22:00:00+00:00"
+      "dateEnd": "2026-10-24T22:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11396",
@@ -1113,7 +1094,8 @@
       "location": "Austin",
       "country": "United States",
       "dateStart": "2026-10-25T20:00:00+00:00",
-      "dateEnd": "2026-10-25T22:00:00+00:00"
+      "dateEnd": "2026-10-25T22:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11397",
@@ -1124,7 +1106,8 @@
       "location": "Mexico City",
       "country": "Mexico",
       "dateStart": "2026-10-30T18:30:00+00:00",
-      "dateEnd": "2026-10-30T19:30:00+00:00"
+      "dateEnd": "2026-10-30T19:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11398",
@@ -1135,7 +1118,8 @@
       "location": "Mexico City",
       "country": "Mexico",
       "dateStart": "2026-10-30T22:00:00+00:00",
-      "dateEnd": "2026-10-30T23:00:00+00:00"
+      "dateEnd": "2026-10-30T23:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11399",
@@ -1146,7 +1130,8 @@
       "location": "Mexico City",
       "country": "Mexico",
       "dateStart": "2026-10-31T17:30:00+00:00",
-      "dateEnd": "2026-10-31T18:30:00+00:00"
+      "dateEnd": "2026-10-31T18:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11400",
@@ -1157,7 +1142,8 @@
       "location": "Mexico City",
       "country": "Mexico",
       "dateStart": "2026-10-31T21:00:00+00:00",
-      "dateEnd": "2026-10-31T22:00:00+00:00"
+      "dateEnd": "2026-10-31T22:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11404",
@@ -1168,7 +1154,8 @@
       "location": "Mexico City",
       "country": "Mexico",
       "dateStart": "2026-11-01T20:00:00+00:00",
-      "dateEnd": "2026-11-01T22:00:00+00:00"
+      "dateEnd": "2026-11-01T22:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11405",
@@ -1179,7 +1166,8 @@
       "location": "São Paulo",
       "country": "Brazil",
       "dateStart": "2026-11-06T15:30:00+00:00",
-      "dateEnd": "2026-11-06T16:30:00+00:00"
+      "dateEnd": "2026-11-06T16:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11406",
@@ -1190,7 +1178,8 @@
       "location": "São Paulo",
       "country": "Brazil",
       "dateStart": "2026-11-06T19:00:00+00:00",
-      "dateEnd": "2026-11-06T20:00:00+00:00"
+      "dateEnd": "2026-11-06T20:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11407",
@@ -1201,7 +1190,8 @@
       "location": "São Paulo",
       "country": "Brazil",
       "dateStart": "2026-11-07T14:30:00+00:00",
-      "dateEnd": "2026-11-07T15:30:00+00:00"
+      "dateEnd": "2026-11-07T15:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11408",
@@ -1212,7 +1202,8 @@
       "location": "São Paulo",
       "country": "Brazil",
       "dateStart": "2026-11-07T18:00:00+00:00",
-      "dateEnd": "2026-11-07T19:00:00+00:00"
+      "dateEnd": "2026-11-07T19:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11412",
@@ -1223,7 +1214,8 @@
       "location": "São Paulo",
       "country": "Brazil",
       "dateStart": "2026-11-08T17:00:00+00:00",
-      "dateEnd": "2026-11-08T19:00:00+00:00"
+      "dateEnd": "2026-11-08T19:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11413",
@@ -1234,7 +1226,8 @@
       "location": "Las Vegas",
       "country": "United States",
       "dateStart": "2026-11-20T00:30:00+00:00",
-      "dateEnd": "2026-11-20T01:30:00+00:00"
+      "dateEnd": "2026-11-20T01:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11414",
@@ -1245,7 +1238,8 @@
       "location": "Las Vegas",
       "country": "United States",
       "dateStart": "2026-11-20T04:00:00+00:00",
-      "dateEnd": "2026-11-20T05:00:00+00:00"
+      "dateEnd": "2026-11-20T05:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11415",
@@ -1256,7 +1250,8 @@
       "location": "Las Vegas",
       "country": "United States",
       "dateStart": "2026-11-21T00:30:00+00:00",
-      "dateEnd": "2026-11-21T01:30:00+00:00"
+      "dateEnd": "2026-11-21T01:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11416",
@@ -1267,7 +1262,8 @@
       "location": "Las Vegas",
       "country": "United States",
       "dateStart": "2026-11-21T04:00:00+00:00",
-      "dateEnd": "2026-11-21T05:00:00+00:00"
+      "dateEnd": "2026-11-21T05:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11420",
@@ -1278,7 +1274,8 @@
       "location": "Las Vegas",
       "country": "United States",
       "dateStart": "2026-11-22T04:00:00+00:00",
-      "dateEnd": "2026-11-22T06:00:00+00:00"
+      "dateEnd": "2026-11-22T06:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11421",
@@ -1289,7 +1286,8 @@
       "location": "Lusail",
       "country": "Qatar",
       "dateStart": "2026-11-27T13:30:00+00:00",
-      "dateEnd": "2026-11-27T14:30:00+00:00"
+      "dateEnd": "2026-11-27T14:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11422",
@@ -1300,7 +1298,8 @@
       "location": "Lusail",
       "country": "Qatar",
       "dateStart": "2026-11-27T17:00:00+00:00",
-      "dateEnd": "2026-11-27T18:00:00+00:00"
+      "dateEnd": "2026-11-27T18:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11423",
@@ -1311,7 +1310,8 @@
       "location": "Lusail",
       "country": "Qatar",
       "dateStart": "2026-11-28T14:30:00+00:00",
-      "dateEnd": "2026-11-28T15:30:00+00:00"
+      "dateEnd": "2026-11-28T15:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11424",
@@ -1322,7 +1322,8 @@
       "location": "Lusail",
       "country": "Qatar",
       "dateStart": "2026-11-28T18:00:00+00:00",
-      "dateEnd": "2026-11-28T19:00:00+00:00"
+      "dateEnd": "2026-11-28T19:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11428",
@@ -1333,7 +1334,8 @@
       "location": "Lusail",
       "country": "Qatar",
       "dateStart": "2026-11-29T16:00:00+00:00",
-      "dateEnd": "2026-11-29T18:00:00+00:00"
+      "dateEnd": "2026-11-29T18:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11429",
@@ -1344,7 +1346,8 @@
       "location": "Yas Marina",
       "country": "United Arab Emirates",
       "dateStart": "2026-12-04T09:30:00+00:00",
-      "dateEnd": "2026-12-04T10:30:00+00:00"
+      "dateEnd": "2026-12-04T10:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11430",
@@ -1355,7 +1358,8 @@
       "location": "Yas Marina",
       "country": "United Arab Emirates",
       "dateStart": "2026-12-04T13:00:00+00:00",
-      "dateEnd": "2026-12-04T14:00:00+00:00"
+      "dateEnd": "2026-12-04T14:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11431",
@@ -1366,7 +1370,8 @@
       "location": "Yas Marina",
       "country": "United Arab Emirates",
       "dateStart": "2026-12-05T10:30:00+00:00",
-      "dateEnd": "2026-12-05T11:30:00+00:00"
+      "dateEnd": "2026-12-05T11:30:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11432",
@@ -1377,7 +1382,8 @@
       "location": "Yas Marina",
       "country": "United Arab Emirates",
       "dateStart": "2026-12-05T14:00:00+00:00",
-      "dateEnd": "2026-12-05T15:00:00+00:00"
+      "dateEnd": "2026-12-05T15:00:00+00:00",
+      "status": "scheduled"
     },
     {
       "id": "11436",
@@ -1388,7 +1394,8 @@
       "location": "Yas Marina",
       "country": "United Arab Emirates",
       "dateStart": "2026-12-06T13:00:00+00:00",
-      "dateEnd": "2026-12-06T15:00:00+00:00"
+      "dateEnd": "2026-12-06T15:00:00+00:00",
+      "status": "scheduled"
     }
   ],
   "drivers": [

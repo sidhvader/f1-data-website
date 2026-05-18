@@ -104,13 +104,21 @@ function getFastestLap(lapTimes) {
 }
 
 function getSessionStatus(session) {
-  const startDate = session.dateStart ? new Date(session.dateStart) : null;
+  if (session.status === "completed") {
+    return {
+      type: "sample",
+      label: "Completed session",
+      message: "This session is marked complete in the local OpenF1 cache. Charts currently use local sample telemetry and lap times.",
+    };
+  }
 
-  if (startDate && startDate.getTime() > Date.now()) {
+  const endDate = session.dateEnd ? new Date(session.dateEnd) : null;
+
+  if (endDate && endDate.getTime() > Date.now()) {
     return {
       type: "future",
-      label: "Future session",
-      message: `This session starts on ${formatDate(startDate)}. Real telemetry and lap times are not available yet.`,
+      label: "Session not completed",
+      message: `This session ends on ${formatDate(endDate)}. Telemetry and lap times are hidden until the session is complete.`,
     };
   }
 

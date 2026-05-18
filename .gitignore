@@ -2,3 +2,5 @@ node_modules
 dist
 .tools
 .DS_Store
+github-upload
+f1-data-website-github-upload.zip
