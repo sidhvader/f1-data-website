@@ -31,7 +31,7 @@ export default function TelemetryChart({ title, data, lines, yAxisLabel, xKey = 
                 borderRadius: "8px",
                 color: "#ffffff",
               }}
-              labelFormatter={(value) => `${value}s`}
+              labelFormatter={(value) => (xUnit ? `${value}${xUnit}` : value)}
             />
             <Legend />
             {lines.map((line) => (

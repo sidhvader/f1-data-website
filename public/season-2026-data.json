@@ -2,13 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-<<<<<<< Updated upstream
-  "updatedAt": "2026-05-22T11:25:56.710Z",
-  "completedSessionCount": 26,
-=======
-  "updatedAt": "2026-05-22T18:03:03.070Z",
+  "updatedAt": "2026-05-22T18:30:04.867Z",
   "completedSessionCount": 27,
->>>>>>> Stashed changes
   "sessions": [
     {
       "id": "11465",
@@ -1406,157 +1401,157 @@
   "drivers": [
     {
       "id": "ALB",
-      "name": "Alexander ALBON",
+      "name": "Alexander Albon",
       "number": 23,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Williams",
+      "color": "#64c4ff"
     },
     {
       "id": "LIN",
-      "name": "Arvid LINDBLAD",
+      "name": "Arvid Lindblad",
       "number": 41,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Racing Bulls",
+      "color": "#6692ff"
     },
     {
       "id": "SAI",
-      "name": "Carlos SAINZ",
+      "name": "Carlos Sainz",
       "number": 55,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Williams",
+      "color": "#64c4ff"
     },
     {
       "id": "LEC",
-      "name": "Charles LECLERC",
+      "name": "Charles Leclerc",
       "number": 16,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Ferrari",
+      "color": "#e10600"
     },
     {
       "id": "OCO",
-      "name": "Esteban OCON",
+      "name": "Esteban Ocon",
       "number": 31,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Haas F1 Team",
+      "color": "#b6babd"
     },
     {
       "id": "ALO",
-      "name": "Fernando ALONSO",
+      "name": "Fernando Alonso",
       "number": 14,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Aston Martin",
+      "color": "#358c75"
     },
     {
       "id": "COL",
-      "name": "Franco COLAPINTO",
+      "name": "Franco Colapinto",
       "number": 43,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Alpine",
+      "color": "#2293d1"
     },
     {
       "id": "BOR",
-      "name": "Gabriel BORTOLETO",
+      "name": "Gabriel Bortoleto",
       "number": 5,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Audi",
+      "color": "#00e701"
     },
     {
       "id": "RUS",
-      "name": "George RUSSELL",
+      "name": "George Russell",
       "number": 63,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Mercedes",
+      "color": "#00d2be"
     },
     {
       "id": "HAD",
-      "name": "Isack HADJAR",
+      "name": "Isack Hadjar",
       "number": 6,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Red Bull Racing",
+      "color": "#3671c6"
     },
     {
       "id": "ANT",
-      "name": "Kimi ANTONELLI",
+      "name": "Kimi Antonelli",
       "number": 12,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Mercedes",
+      "color": "#00d2be"
     },
     {
       "id": "STR",
-      "name": "Lance STROLL",
+      "name": "Lance Stroll",
       "number": 18,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Aston Martin",
+      "color": "#358c75"
     },
     {
       "id": "NOR",
-      "name": "Lando NORRIS",
+      "name": "Lando Norris",
       "number": 1,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "McLaren",
+      "color": "#ff8000"
     },
     {
       "id": "HAM",
-      "name": "Lewis HAMILTON",
+      "name": "Lewis Hamilton",
       "number": 44,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Ferrari",
+      "color": "#e10600"
     },
     {
       "id": "LAW",
-      "name": "Liam LAWSON",
+      "name": "Liam Lawson",
       "number": 30,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Racing Bulls",
+      "color": "#6692ff"
     },
     {
       "id": "VER",
-      "name": "Max VERSTAPPEN",
+      "name": "Max Verstappen",
       "number": 3,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Red Bull Racing",
+      "color": "#3671c6"
     },
     {
       "id": "HUL",
-      "name": "Nico HULKENBERG",
+      "name": "Nico Hulkenberg",
       "number": 27,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Audi",
+      "color": "#00e701"
     },
     {
       "id": "BEA",
-      "name": "Oliver BEARMAN",
+      "name": "Oliver Bearman",
       "number": 87,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Haas F1 Team",
+      "color": "#b6babd"
     },
     {
       "id": "PIA",
-      "name": "Oscar PIASTRI",
+      "name": "Oscar Piastri",
       "number": 81,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "McLaren",
+      "color": "#ff8000"
     },
     {
       "id": "GAS",
-      "name": "Pierre GASLY",
+      "name": "Pierre Gasly",
       "number": 10,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Alpine",
+      "color": "#2293d1"
     },
     {
       "id": "PER",
-      "name": "Sergio PEREZ",
+      "name": "Sergio Perez",
       "number": 11,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Cadillac",
+      "color": "#d4af37"
     },
     {
       "id": "BOT",
-      "name": "Valtteri BOTTAS",
+      "name": "Valtteri Bottas",
       "number": 77,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Cadillac",
+      "color": "#d4af37"
     }
   ]
 }

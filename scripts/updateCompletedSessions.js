@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { drivers as fallbackDrivers } from "../src/data/mockTelemetry.js";
 
 const OPENF1_BASE_URL = "https://api.openf1.org/v1";
 const YEAR = 2026;
@@ -8,7 +9,7 @@ const CANCELED_MEETINGS = new Set(["Bahrain Grand Prix", "Saudi Arabian Grand Pr
 
 // This is the file the website reads when it builds.
 // The GitHub Action runs this script and refreshes the file automatically.
-const outputPath = join(projectRoot(), "public", "openf1-2026-cache.json");
+const outputPath = join(projectRoot(), "public", "season-2026-data.json");
 
 async function main() {
   const previousCache = await readExistingCache();
@@ -116,12 +117,16 @@ function normalizeDriver(driver) {
     return null;
   }
 
+  const fallbackDriver = fallbackDrivers.find((item) => {
+    return item.id === driver.name_acronym || item.number === driver.driver_number;
+  });
+
   return {
     id: driver.name_acronym,
     name: formatDriverName(driver),
     number: driver.driver_number,
-    team: driver.team_name ?? "Unknown team",
-    color: driver.team_colour ? `#${driver.team_colour}` : "#d6d9df",
+    team: driver.team_name ?? fallbackDriver?.team ?? "Unknown team",
+    color: driver.team_colour ? `#${driver.team_colour}` : fallbackDriver?.color ?? "#d6d9df",
   };
 }
 
@@ -135,10 +140,19 @@ function buildMeetingName(session) {
 
 function formatDriverName(driver) {
   if (driver.first_name && driver.last_name) {
-    return `${driver.first_name} ${driver.last_name}`;
+    return `${toTitleCase(driver.first_name)} ${toTitleCase(driver.last_name)}`;
   }
 
-  return driver.full_name;
+  return toTitleCase(driver.full_name);
+}
+
+function toTitleCase(value) {
+  return value
+    .toLowerCase()
+    .split(" ")
+    .filter(Boolean)
+    .map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
+    .join(" ");
 }
 
 function isCompleted(dateEnd) {

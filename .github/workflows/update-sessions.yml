@@ -34,7 +34,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update completed F1 sessions"
-          file_pattern: public/openf1-2026-cache.json
+          file_pattern: public/season-2026-data.json
 
       - name: Trigger Netlify deploy hook
         env:

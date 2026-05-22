@@ -1,16 +1,15 @@
-import { createMockLapTimes, createMockTelemetry, drivers, getMockDriverSummary, sessions } from "../data/mockTelemetry";
+import { drivers, sessions } from "../data/mockTelemetry";
 
 const OPENF1_BASE_URL = "https://api.openf1.org/v1";
-const CACHE_URL = "/openf1-2026-cache.json";
+const CACHE_URL = "/season-2026-data.json";
 const CANCELED_2026_MEETINGS = new Set(["Bahrain Grand Prix", "Saudi Arabian Grand Prix"]);
+const MAX_TELEMETRY_POINTS = 220;
 let cachedSeasonData;
+const dashboardDataCache = new Map();
 
-// Dashboard selectors use the local 2026 cache. Past sessions get local sample
-// chart data; future sessions are schedule-only so the app does not pretend
-// real telemetry exists before a race weekend happens.
+// Dashboard selectors use the local 2026 session cache.
+// Completed sessions use real OpenF1 lap and car data.
 export async function getDashboardData(driverId, sessionId) {
-  await wait(500);
-
   const seasonData = await getSeasonData();
   const driver = findDriver(driverId, seasonData.drivers);
   const session = findSession(sessionId, seasonData.sessions);
@@ -33,24 +32,45 @@ export async function getDashboardData(driverId, sessionId) {
     };
   }
 
-  const telemetry = createMockTelemetry(driver.id);
-  const lapTimes = createMockLapTimes(driver.id, session);
-  const summary = getMockDriverSummary(driver.id);
+  const realData = await getRealDashboardData(driver, session);
+
+  if (realData) {
+    return {
+      driver,
+      session,
+      summary: {
+        fastestLap: getFastestLap(realData.lapTimes),
+        maxSpeed: getMaxSpeed(realData.telemetry),
+      },
+      telemetry: realData.telemetry,
+      lapTimes: realData.lapTimes,
+      dataStatus: {
+        source: "OpenF1 real lap and car data",
+      },
+      sessionStatus: {
+        ...sessionStatus,
+        message: "This completed session is using real OpenF1 lap times, speed, throttle, and brake data.",
+      },
+    };
+  }
 
   return {
     driver,
     session,
     summary: {
-      ...summary,
-      fastestLap: getFastestLap(lapTimes),
-      maxSpeed: Math.max(...telemetry.map((point) => point.speed)),
+      fastestLap: "--",
+      maxSpeed: null,
     },
-    telemetry,
-    lapTimes,
+    telemetry: [],
+    lapTimes: [],
     dataStatus: {
-      source: "Local sample telemetry and lap times",
+      source: "OpenF1 data unavailable",
     },
-    sessionStatus,
+    sessionStatus: {
+      type: "unavailable",
+      label: "No OpenF1 data yet",
+      message: "This session is completed, but OpenF1 did not return usable lap and car data for this driver yet.",
+    },
   };
 }
 
@@ -68,6 +88,92 @@ export async function getSessions() {
 
 export function getOpenF1BaseUrl() {
   return OPENF1_BASE_URL;
+}
+
+async function getRealDashboardData(driver, session) {
+  if (!session.sessionKey || !driver.number) {
+    return null;
+  }
+
+  const cacheKey = `${session.sessionKey}-${driver.number}`;
+
+  if (dashboardDataCache.has(cacheKey)) {
+    return dashboardDataCache.get(cacheKey);
+  }
+
+  try {
+    const [rawTelemetry, rawLapTimes] = await Promise.all([
+      fetchOpenF1Json(`/car_data?session_key=${session.sessionKey}&driver_number=${driver.number}`),
+      fetchOpenF1Json(`/laps?session_key=${session.sessionKey}&driver_number=${driver.number}`),
+    ]);
+
+    const telemetry = normalizeTelemetry(rawTelemetry);
+    const lapTimes = normalizeLapTimes(rawLapTimes);
+
+    if (!telemetry.length || !lapTimes.length) {
+      dashboardDataCache.set(cacheKey, null);
+      return null;
+    }
+
+    const realData = { telemetry, lapTimes };
+    dashboardDataCache.set(cacheKey, realData);
+    return realData;
+  } catch (error) {
+    dashboardDataCache.set(cacheKey, null);
+    return null;
+  }
+}
+
+async function fetchOpenF1Json(path) {
+  const response = await fetch(`${OPENF1_BASE_URL}${path}`);
+
+  if (!response.ok) {
+    throw new Error(`OpenF1 request failed: ${response.status}`);
+  }
+
+  return response.json();
+}
+
+function normalizeTelemetry(rawTelemetry) {
+  const usefulPoints = rawTelemetry
+    .filter((point) => point.date && Number.isFinite(point.speed))
+    .sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  if (!usefulPoints.length) {
+    return [];
+  }
+
+  const firstTime = new Date(usefulPoints[0].date).getTime();
+
+  return downsample(usefulPoints, MAX_TELEMETRY_POINTS).map((point) => ({
+    time: Math.round((new Date(point.date).getTime() - firstTime) / 1000),
+    speed: Math.round(point.speed),
+    throttle: Number(point.throttle ?? 0),
+    brake: point.brake ? 100 : 0,
+  }));
+}
+
+function normalizeLapTimes(rawLapTimes) {
+  return rawLapTimes
+    .filter((lap) => Number.isFinite(lap.lap_duration) && Number.isFinite(lap.lap_number))
+    .sort((a, b) => a.lap_number - b.lap_number)
+    .map((lap) => ({
+      lap: lap.lap_number,
+      lapTime: formatLapTime(lap.lap_duration),
+      lapTimeSeconds: lap.lap_duration,
+    }));
+}
+
+function downsample(items, maxItems) {
+  if (items.length <= maxItems) {
+    return items;
+  }
+
+  const step = (items.length - 1) / (maxItems - 1);
+
+  return Array.from({ length: maxItems }, (_, index) => {
+    return items[Math.round(index * step)];
+  });
 }
 
 async function getSeasonData() {
@@ -103,12 +209,20 @@ function getFastestLap(lapTimes) {
   return fastestLap?.lapTime ?? "--";
 }
 
+function getMaxSpeed(telemetry) {
+  if (!telemetry.length) {
+    return null;
+  }
+
+  return Math.max(...telemetry.map((point) => point.speed));
+}
+
 function getSessionStatus(session) {
   if (session.status === "completed") {
     return {
-      type: "sample",
+      type: "completed",
       label: "Completed session",
-      message: "This session is marked complete in the local OpenF1 cache. Charts currently use local sample telemetry and lap times.",
+      message: "This session is marked complete in the local OpenF1 cache.",
     };
   }
 
@@ -135,6 +249,12 @@ function formatDate(date) {
     day: "numeric",
     year: "numeric",
   }).format(date);
+}
+
+function formatLapTime(totalSeconds) {
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = (totalSeconds - minutes * 60).toFixed(3).padStart(6, "0");
+  return `${minutes}:${seconds}`;
 }
 
 function findDriver(driverId, driverOptions) {

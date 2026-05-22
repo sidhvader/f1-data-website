@@ -10,7 +10,7 @@ export default function App() {
   const [drivers, setDrivers] = useState([]);
   const [sessions, setSessions] = useState([]);
   const [selectedDriver, setSelectedDriver] = useState("RUS");
-  const [selectedSession, setSelectedSession] = useState("australia-2026-race");
+  const [selectedSession, setSelectedSession] = useState("");
   const [dashboardData, setDashboardData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
@@ -25,7 +25,8 @@ export default function App() {
         return driverOptions.some((driver) => driver.id === currentDriver) ? currentDriver : driverOptions[0]?.id ?? currentDriver;
       });
       setSelectedSession((currentSession) => {
-        const fallbackSession = sessionOptions.find((session) => session.type === "Race") ?? sessionOptions[0];
+        const completedSessions = sessionOptions.filter((session) => session.status === "completed");
+        const fallbackSession = completedSessions.at(-1) ?? sessionOptions[0];
         return sessionOptions.some((session) => session.id === currentSession) ? currentSession : fallbackSession?.id ?? currentSession;
       });
     }
@@ -36,6 +37,10 @@ export default function App() {
   // Reload telemetry whenever the user changes driver or session.
   useEffect(() => {
     async function loadDashboard() {
+      if (!selectedDriver || !selectedSession) {
+        return;
+      }
+
       try {
         setIsLoading(true);
         setErrorMessage("");
@@ -71,7 +76,7 @@ export default function App() {
             </div>
             <h1 className="text-3xl font-black text-white sm:text-5xl">F1 Telemetry Dashboard</h1>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300 sm:text-base">
-              Explore speed, throttle, braking, and lap times for every driver and session.
+              Explore real OpenF1 speed, throttle, braking, and lap times for completed 2026 sessions.
             </p>
           </div>
 
@@ -137,7 +142,7 @@ export default function App() {
             <section className="rounded-lg border border-f1-border bg-black/25 p-4">
               <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Current Data</p>
               <p className="mt-2 text-sm text-slate-200">
-                Driver and session list: static 2026 cache. Charts: {dataStatus?.source}.
+                Driver and session list: 2026 session cache. Charts: {dataStatus?.source}.
               </p>
               <p className="mt-1 text-sm text-slate-300">{sessionStatus?.message}</p>
             </section>
@@ -204,7 +209,7 @@ export default function App() {
                 <Flag className="text-yellow-300" />
                 <div>
                   <p className="text-xs uppercase tracking-wide text-slate-400">Data Source</p>
-                  <p className="font-bold text-white">Static cache + sample data</p>
+                  <p className="font-bold text-white">OpenF1 API</p>
                 </div>
               </div>
             </section>
