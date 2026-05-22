@@ -2,13 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-<<<<<<< Updated upstream
-  "updatedAt": "2026-05-22T11:25:56.710Z",
-  "completedSessionCount": 26,
-=======
-  "updatedAt": "2026-05-22T18:03:03.070Z",
+  "updatedAt": "2026-05-22T18:25:37.007Z",
   "completedSessionCount": 27,
->>>>>>> Stashed changes
   "sessions": [
     {
       "id": "11465",
