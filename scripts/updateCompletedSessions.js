@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { drivers as fallbackDrivers } from "../src/data/mockTelemetry.js";
+import { driverMetadata } from "../src/data/driverMetadata.js";
 
 const OPENF1_BASE_URL = "https://api.openf1.org/v1";
 const YEAR = 2026;
@@ -117,7 +117,7 @@ function normalizeDriver(driver) {
     return null;
   }
 
-  const fallbackDriver = fallbackDrivers.find((item) => {
+  const fallbackDriver = driverMetadata.find((item) => {
     return item.id === driver.name_acronym || item.number === driver.driver_number;
   });
 

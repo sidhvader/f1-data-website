@@ -18,17 +18,29 @@ export default function App() {
   // Load selector options once when the app starts.
   useEffect(() => {
     async function loadOptions() {
-      const [driverOptions, sessionOptions] = await Promise.all([getDrivers(), getSessions()]);
-      setDrivers(driverOptions);
-      setSessions(sessionOptions);
-      setSelectedDriver((currentDriver) => {
-        return driverOptions.some((driver) => driver.id === currentDriver) ? currentDriver : driverOptions[0]?.id ?? currentDriver;
-      });
-      setSelectedSession((currentSession) => {
-        const completedSessions = sessionOptions.filter((session) => session.status === "completed");
-        const fallbackSession = completedSessions.at(-1) ?? sessionOptions[0];
-        return sessionOptions.some((session) => session.id === currentSession) ? currentSession : fallbackSession?.id ?? currentSession;
-      });
+      try {
+        const [driverOptions, sessionOptions] = await Promise.all([getDrivers(), getSessions()]);
+
+        if (!driverOptions.length || !sessionOptions.length) {
+          setErrorMessage("The 2026 session cache could not be loaded. Please refresh after the next GitHub/Netlify deploy.");
+          setIsLoading(false);
+          return;
+        }
+
+        setDrivers(driverOptions);
+        setSessions(sessionOptions);
+        setSelectedDriver((currentDriver) => {
+          return driverOptions.some((driver) => driver.id === currentDriver) ? currentDriver : driverOptions[0]?.id ?? currentDriver;
+        });
+        setSelectedSession((currentSession) => {
+          const completedSessions = sessionOptions.filter((session) => session.status === "completed");
+          const fallbackSession = completedSessions.at(-1) ?? sessionOptions[0];
+          return sessionOptions.some((session) => session.id === currentSession) ? currentSession : fallbackSession?.id ?? currentSession;
+        });
+      } catch (error) {
+        setErrorMessage("The 2026 session cache could not be loaded. Please try again.");
+        setIsLoading(false);
+      }
     }
 
     loadOptions();
@@ -87,6 +99,7 @@ export default function App() {
                 className="mt-2 w-full rounded-lg border border-f1-border bg-f1-panel px-3 py-3 text-white outline-none transition focus:border-f1-red"
                 value={selectedDriver}
                 onChange={(event) => setSelectedDriver(event.target.value)}
+                disabled={!drivers.length}
               >
                 {drivers.map((item) => (
                   <option key={item.id} value={item.id}>
@@ -102,6 +115,7 @@ export default function App() {
                 className="mt-2 w-full rounded-lg border border-f1-border bg-f1-panel px-3 py-3 text-white outline-none transition focus:border-f1-red"
                 value={selectedSession}
                 onChange={(event) => setSelectedSession(event.target.value)}
+                disabled={!sessions.length}
               >
                 {sessions.map((item) => (
                   <option key={item.id} value={item.id}>

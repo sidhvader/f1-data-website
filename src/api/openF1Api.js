@@ -1,4 +1,4 @@
-import { drivers, sessions } from "../data/mockTelemetry";
+import { driverMetadata } from "../data/driverMetadata";
 
 const OPENF1_BASE_URL = "https://api.openf1.org/v1";
 const CACHE_URL = "/season-2026-data.json";
@@ -13,9 +13,14 @@ export async function getDashboardData(driverId, sessionId) {
   const seasonData = await getSeasonData();
   const driver = findDriver(driverId, seasonData.drivers);
   const session = findSession(sessionId, seasonData.sessions);
+
+  if (!session) {
+    throw new Error("No session is selected.");
+  }
+
   const sessionStatus = getSessionStatus(session);
 
-  if (sessionStatus.type === "future") {
+  if (sessionStatus.type === "future" || sessionStatus.type === "unavailable") {
     return {
       driver,
       session,
@@ -191,11 +196,11 @@ async function getSeasonData() {
     const cache = await response.json();
 
     cachedSeasonData = {
-      drivers: cache.drivers?.length ? cache.drivers : drivers,
-      sessions: cache.sessions?.length ? removeCanceledSessions(cache.sessions) : sessions,
+      drivers: cache.drivers?.length ? addDriverMetadata(cache.drivers) : driverMetadata,
+      sessions: cache.sessions?.length ? removeCanceledSessions(cache.sessions) : [],
     };
   } catch (error) {
-    cachedSeasonData = { drivers, sessions };
+    cachedSeasonData = { drivers: driverMetadata, sessions: [] };
   }
 
   return cachedSeasonData;
@@ -237,9 +242,9 @@ function getSessionStatus(session) {
   }
 
   return {
-    type: "sample",
-    label: "Sample data",
-    message: "This dashboard is showing local sample telemetry and lap times for this completed or undated session.",
+    type: "unavailable",
+    label: "Session unavailable",
+    message: "This session is missing a completion time in the 2026 session cache.",
   };
 }
 
@@ -258,11 +263,24 @@ function formatLapTime(totalSeconds) {
 }
 
 function findDriver(driverId, driverOptions) {
-  return driverOptions.find((item) => item.id === driverId) ?? drivers.find((item) => item.id === driverId) ?? drivers[0];
+  return driverOptions.find((item) => item.id === driverId) ?? driverMetadata.find((item) => item.id === driverId) ?? driverOptions[0] ?? driverMetadata[0];
 }
 
 function findSession(sessionId, sessionOptions) {
-  return sessionOptions.find((item) => item.id === sessionId) ?? sessions.find((item) => item.id === sessionId) ?? sessions[0];
+  return sessionOptions.find((item) => item.id === sessionId) ?? sessionOptions[0];
+}
+
+function addDriverMetadata(driverOptions) {
+  return driverOptions.map((driver) => {
+    const metadata = driverMetadata.find((item) => item.id === driver.id || item.number === driver.number);
+
+    return {
+      ...driver,
+      name: driver.name || metadata?.name || driver.id,
+      team: driver.team && driver.team !== "Unknown team" ? driver.team : metadata?.team ?? "Unknown team",
+      color: driver.color && driver.color !== "#d6d9df" ? driver.color : metadata?.color ?? "#d6d9df",
+    };
+  });
 }
 
 function removeCanceledSessions(sessionOptions) {

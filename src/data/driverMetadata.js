@@ -1,0 +1,26 @@
+// Static driver/team details are only used to label drivers clearly.
+// Lap times and telemetry still come from the OpenF1 API.
+export const driverMetadata = [
+  { id: "RUS", name: "George Russell", number: 63, team: "Mercedes", color: "#00d2be" },
+  { id: "ANT", name: "Kimi Antonelli", number: 12, team: "Mercedes", color: "#00d2be" },
+  { id: "LEC", name: "Charles Leclerc", number: 16, team: "Ferrari", color: "#e10600" },
+  { id: "HAM", name: "Lewis Hamilton", number: 44, team: "Ferrari", color: "#e10600" },
+  { id: "NOR", name: "Lando Norris", number: 1, team: "McLaren", color: "#ff8000" },
+  { id: "PIA", name: "Oscar Piastri", number: 81, team: "McLaren", color: "#ff8000" },
+  { id: "VER", name: "Max Verstappen", number: 3, team: "Red Bull Racing", color: "#3671c6" },
+  { id: "HAD", name: "Isack Hadjar", number: 6, team: "Red Bull Racing", color: "#3671c6" },
+  { id: "GAS", name: "Pierre Gasly", number: 10, team: "Alpine", color: "#2293d1" },
+  { id: "COL", name: "Franco Colapinto", number: 43, team: "Alpine", color: "#2293d1" },
+  { id: "OCO", name: "Esteban Ocon", number: 31, team: "Haas F1 Team", color: "#b6babd" },
+  { id: "BEA", name: "Oliver Bearman", number: 87, team: "Haas F1 Team", color: "#b6babd" },
+  { id: "LAW", name: "Liam Lawson", number: 30, team: "Racing Bulls", color: "#6692ff" },
+  { id: "LIN", name: "Arvid Lindblad", number: 41, team: "Racing Bulls", color: "#6692ff" },
+  { id: "SAI", name: "Carlos Sainz", number: 55, team: "Williams", color: "#64c4ff" },
+  { id: "ALB", name: "Alexander Albon", number: 23, team: "Williams", color: "#64c4ff" },
+  { id: "HUL", name: "Nico Hulkenberg", number: 27, team: "Audi", color: "#00e701" },
+  { id: "BOR", name: "Gabriel Bortoleto", number: 5, team: "Audi", color: "#00e701" },
+  { id: "PER", name: "Sergio Perez", number: 11, team: "Cadillac", color: "#d4af37" },
+  { id: "BOT", name: "Valtteri Bottas", number: 77, team: "Cadillac", color: "#d4af37" },
+  { id: "ALO", name: "Fernando Alonso", number: 14, team: "Aston Martin", color: "#358c75" },
+  { id: "STR", name: "Lance Stroll", number: 18, team: "Aston Martin", color: "#358c75" },
+];
