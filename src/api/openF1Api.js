@@ -39,7 +39,7 @@ export async function getDashboardData(driverId, sessionId) {
 
   const realData = await getRealDashboardData(driver, session);
 
-  if (realData) {
+  if (realData.type === "ready") {
     return {
       driver,
       session,
@@ -55,6 +55,28 @@ export async function getDashboardData(driverId, sessionId) {
       sessionStatus: {
         ...sessionStatus,
         message: "This completed session is using real OpenF1 lap times, speed, throttle, and brake data.",
+      },
+    };
+  }
+
+  if (realData.type === "restricted" || realData.type === "error") {
+    return {
+      driver,
+      session,
+      summary: {
+        fastestLap: "--",
+        maxSpeed: null,
+      },
+      telemetry: [],
+      lapTimes: [],
+      dataStatus: {
+        source: "OpenF1 temporarily unavailable",
+      },
+      sessionStatus: {
+        type: "restricted",
+        label: "OpenF1 temporarily unavailable",
+        message:
+          "OpenF1 is temporarily blocking or failing public requests during a live or recently finished session. Try again after the current F1 session window ends.",
       },
     };
   }
@@ -116,16 +138,22 @@ async function getRealDashboardData(driver, session) {
     const lapTimes = normalizeLapTimes(rawLapTimes);
 
     if (!telemetry.length || !lapTimes.length) {
-      dashboardDataCache.set(cacheKey, null);
-      return null;
+      const missingData = { type: "missing" };
+      dashboardDataCache.set(cacheKey, missingData);
+      return missingData;
     }
 
-    const realData = { telemetry, lapTimes };
+    const realData = { type: "ready", telemetry, lapTimes };
     dashboardDataCache.set(cacheKey, realData);
     return realData;
   } catch (error) {
-    dashboardDataCache.set(cacheKey, null);
-    return null;
+    const unavailableData =
+      error.status === 401
+        ? { type: "restricted", message: error.message }
+        : { type: "error", message: error.message };
+
+    dashboardDataCache.set(cacheKey, unavailableData);
+    return unavailableData;
   }
 }
 
@@ -133,10 +161,22 @@ async function fetchOpenF1Json(path) {
   const response = await fetch(`${OPENF1_BASE_URL}${path}`);
 
   if (!response.ok) {
-    throw new Error(`OpenF1 request failed: ${response.status}`);
+    const message = await getOpenF1ErrorMessage(response);
+    const error = new Error(message);
+    error.status = response.status;
+    throw error;
   }
 
   return response.json();
+}
+
+async function getOpenF1ErrorMessage(response) {
+  try {
+    const body = await response.json();
+    return body.detail ?? `OpenF1 request failed: ${response.status}`;
+  } catch (error) {
+    return `OpenF1 request failed: ${response.status}`;
+  }
 }
 
 function normalizeTelemetry(rawTelemetry) {

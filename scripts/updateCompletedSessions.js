@@ -18,10 +18,22 @@ async function main() {
   );
 
   // OpenF1 gives us sessions and meetings separately, so we fetch both.
-  const [rawSessions, rawMeetings] = await Promise.all([
-    fetchJson(`${OPENF1_BASE_URL}/sessions?year=${YEAR}`),
-    fetchJson(`${OPENF1_BASE_URL}/meetings?year=${YEAR}`),
-  ]);
+  let rawSessions;
+  let rawMeetings;
+
+  try {
+    [rawSessions, rawMeetings] = await Promise.all([
+      fetchJson(`${OPENF1_BASE_URL}/sessions?year=${YEAR}`),
+      fetchJson(`${OPENF1_BASE_URL}/meetings?year=${YEAR}`),
+    ]);
+  } catch (error) {
+    if (isOpenF1Restricted(error) && previousCache) {
+      console.log("OpenF1 is temporarily restricted during a live session. Keeping the existing session cache.");
+      return;
+    }
+
+    throw error;
+  }
 
   // Combine session data with meeting names, then mark each session as completed or scheduled.
   const meetingsByKey = new Map(rawMeetings.map((meeting) => [meeting.meeting_key, meeting]));
@@ -33,7 +45,19 @@ async function main() {
 
   // Driver lists can change during a season, so use the latest completed session.
   const latestCompletedSession = [...sessions].reverse().find((session) => session.status === "completed");
-  const drivers = latestCompletedSession ? await fetchDriversForSession(latestCompletedSession.sessionKey) : previousCache?.drivers ?? [];
+  let drivers = previousCache?.drivers ?? driverMetadata;
+
+  if (latestCompletedSession) {
+    try {
+      drivers = await fetchDriversForSession(latestCompletedSession.sessionKey);
+    } catch (error) {
+      if (isOpenF1Restricted(error)) {
+        console.log("OpenF1 driver data is temporarily restricted. Keeping the existing driver list.");
+      } else {
+        throw error;
+      }
+    }
+  }
 
   const completedSessions = sessions.filter((session) => session.status === "completed");
   const newlyCompleted = completedSessions.filter((session) => !previousCompleted.has(session.id));
@@ -76,10 +100,26 @@ async function fetchJson(url) {
   const response = await fetch(url);
 
   if (!response.ok) {
-    throw new Error(`OpenF1 request failed: ${response.status} ${response.statusText}`);
+    const message = await getOpenF1ErrorMessage(response);
+    const error = new Error(message);
+    error.status = response.status;
+    throw error;
   }
 
   return response.json();
+}
+
+async function getOpenF1ErrorMessage(response) {
+  try {
+    const body = await response.json();
+    return body.detail ?? `OpenF1 request failed: ${response.status} ${response.statusText}`;
+  } catch (error) {
+    return `OpenF1 request failed: ${response.status} ${response.statusText}`;
+  }
+}
+
+function isOpenF1Restricted(error) {
+  return error.status === 401;
 }
 
 async function readExistingCache() {
