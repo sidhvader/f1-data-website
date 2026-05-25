@@ -2,8 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-05-24T15:50:52.194Z",
-  "completedSessionCount": 30,
+  "updatedAt": "2026-05-25T12:52:46.564Z",
+  "completedSessionCount": 31,
   "sessions": [
     {
       "id": "11465",
@@ -375,7 +375,7 @@
       "country": "Canada",
       "dateStart": "2026-05-24T20:00:00+00:00",
       "dateEnd": "2026-05-24T22:00:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11292",
