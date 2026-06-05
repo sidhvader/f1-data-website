@@ -2,8 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-06-04T19:49:48.913Z",
-  "completedSessionCount": 31,
+  "updatedAt": "2026-06-05T19:13:14.975Z",
+  "completedSessionCount": 33,
   "sessions": [
     {
       "id": "11465",
@@ -387,7 +387,7 @@
       "country": "Monaco",
       "dateStart": "2026-06-05T11:30:00+00:00",
       "dateEnd": "2026-06-05T12:30:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11293",
@@ -399,7 +399,7 @@
       "country": "Monaco",
       "dateStart": "2026-06-05T15:00:00+00:00",
       "dateEnd": "2026-06-05T16:00:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11294",
