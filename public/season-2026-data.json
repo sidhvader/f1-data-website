@@ -2,8 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-06-14T11:10:36.874Z",
-  "completedSessionCount": 40,
+  "updatedAt": "2026-06-14T17:02:57.935Z",
+  "completedSessionCount": 41,
   "sessions": [
     {
       "id": "11465",
@@ -495,7 +495,7 @@
       "country": "Spain",
       "dateStart": "2026-06-14T13:00:00+00:00",
       "dateEnd": "2026-06-14T15:00:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11308",
