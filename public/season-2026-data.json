@@ -2,7 +2,7 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-07-06T11:05:31.764Z",
+  "updatedAt": "2026-07-06T15:55:42.181Z",
   "completedSessionCount": 51,
   "sessions": [
     {
@@ -982,7 +982,7 @@
       "sessionKey": 11378,
       "meetingKey": 1296,
       "name": "Singapore Grand Prix",
-      "type": "Practice 1",
+      "type": "Practice 0",
       "location": "Marina Bay",
       "country": "Singapore",
       "dateStart": "2026-10-09T08:30:00+00:00",
