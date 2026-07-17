@@ -2,8 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-07-17T14:05:00.224Z",
-  "completedSessionCount": 52,
+  "updatedAt": "2026-07-17T19:34:27.336Z",
+  "completedSessionCount": 53,
   "sessions": [
     {
       "id": "11465",
@@ -639,7 +639,7 @@
       "country": "Belgium",
       "dateStart": "2026-07-17T15:00:00+00:00",
       "dateEnd": "2026-07-17T16:00:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11329",
@@ -1435,6 +1435,13 @@
       "color": "#9C9FA2"
     },
     {
+      "id": "ALO",
+      "name": "Fernando Alonso",
+      "number": 14,
+      "team": "Aston Martin",
+      "color": "#229971"
+    },
+    {
       "id": "COL",
       "name": "Franco Colapinto",
       "number": 43,
@@ -1461,13 +1468,6 @@
       "number": 6,
       "team": "Red Bull Racing",
       "color": "#4781D7"
-    },
-    {
-      "id": "CRA",
-      "name": "Jak Crawford",
-      "number": 34,
-      "team": "Aston Martin",
-      "color": "#229971"
     },
     {
       "id": "ANT",
