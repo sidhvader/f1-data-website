@@ -2,8 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-07-24T14:14:38.673Z",
-  "completedSessionCount": 57,
+  "updatedAt": "2026-07-24T19:48:30.116Z",
+  "completedSessionCount": 58,
   "sessions": [
     {
       "id": "11465",
@@ -699,7 +699,7 @@
       "country": "Hungary",
       "dateStart": "2026-07-24T15:00:00+00:00",
       "dateEnd": "2026-07-24T16:00:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11337",
@@ -1428,13 +1428,6 @@
       "color": "#ED1131"
     },
     {
-      "id": "HER",
-      "name": "Colton Herta",
-      "number": 25,
-      "team": "Cadillac",
-      "color": "#909090"
-    },
-    {
       "id": "OCO",
       "name": "Esteban Ocon",
       "number": 31,
@@ -1449,11 +1442,11 @@
       "color": "#229971"
     },
     {
-      "id": "VES",
-      "name": "Frederik Vesti",
-      "number": 72,
-      "team": "Mercedes",
-      "color": "#00D7B6"
+      "id": "COL",
+      "name": "Franco Colapinto",
+      "number": 43,
+      "team": "Alpine",
+      "color": "#00A1E8"
     },
     {
       "id": "BOR",
@@ -1477,6 +1470,13 @@
       "color": "#4781D7"
     },
     {
+      "id": "ANT",
+      "name": "Kimi Antonelli",
+      "number": 12,
+      "team": "Mercedes",
+      "color": "#00D7B6"
+    },
+    {
       "id": "STR",
       "name": "Lance Stroll",
       "number": 18,
@@ -1487,13 +1487,6 @@
       "id": "NOR",
       "name": "Lando Norris",
       "number": 1,
-      "team": "McLaren",
-      "color": "#F47600"
-    },
-    {
-      "id": "FOR",
-      "name": "Leonardo Fornaroli",
-      "number": 67,
       "team": "McLaren",
       "color": "#F47600"
     },
@@ -1526,11 +1519,18 @@
       "color": "#F50537"
     },
     {
-      "id": "ARO",
-      "name": "Paul Aron",
-      "number": 61,
-      "team": "Alpine",
-      "color": "#00A1E8"
+      "id": "BEA",
+      "name": "Oliver Bearman",
+      "number": 87,
+      "team": "Haas F1 Team",
+      "color": "#9C9FA2"
+    },
+    {
+      "id": "PIA",
+      "name": "Oscar Piastri",
+      "number": 81,
+      "team": "McLaren",
+      "color": "#F47600"
     },
     {
       "id": "GAS",
@@ -1540,16 +1540,16 @@
       "color": "#00A1E8"
     },
     {
-      "id": "HIR",
-      "name": "Ryo Hirakawa",
-      "number": 50,
-      "team": "Haas F1 Team",
-      "color": "#9C9FA2"
-    },
-    {
       "id": "PER",
       "name": "Sergio Perez",
       "number": 11,
+      "team": "Cadillac",
+      "color": "#909090"
+    },
+    {
+      "id": "BOT",
+      "name": "Valtteri Bottas",
+      "number": 77,
       "team": "Cadillac",
       "color": "#909090"
     }
