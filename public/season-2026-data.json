@@ -2,8 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-07-26T08:40:19.883Z",
-  "completedSessionCount": 60,
+  "updatedAt": "2026-07-26T19:36:55.553Z",
+  "completedSessionCount": 61,
   "sessions": [
     {
       "id": "11465",
@@ -735,7 +735,7 @@
       "country": "Hungary",
       "dateStart": "2026-07-26T13:00:00+00:00",
       "dateEnd": "2026-07-26T15:00:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11343",
