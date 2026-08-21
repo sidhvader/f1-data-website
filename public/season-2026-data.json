@@ -2,8 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-08-21T07:09:14.554Z",
-  "completedSessionCount": 61,
+  "updatedAt": "2026-08-21T13:12:45.832Z",
+  "completedSessionCount": 62,
   "sessions": [
     {
       "id": "11465",
@@ -747,7 +747,7 @@
       "country": "Netherlands",
       "dateStart": "2026-08-21T10:30:00+00:00",
       "dateEnd": "2026-08-21T11:30:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11344",
@@ -1463,13 +1463,6 @@
       "color": "#00D7B6"
     },
     {
-      "id": "HAD",
-      "name": "Isack Hadjar",
-      "number": 6,
-      "team": "Red Bull Racing",
-      "color": "#4781D7"
-    },
-    {
       "id": "ANT",
       "name": "Kimi Antonelli",
       "number": 12,
@@ -1501,8 +1494,8 @@
       "id": "LAW",
       "name": "Liam Lawson",
       "number": 30,
-      "team": "Racing Bulls",
-      "color": "#6C98FF"
+      "team": "Red Bull Racing",
+      "color": "#4781D7"
     },
     {
       "id": "VER",
@@ -1552,6 +1545,13 @@
       "number": 77,
       "team": "Cadillac",
       "color": "#909090"
+    },
+    {
+      "id": "TSU",
+      "name": "Yuki Tsunoda",
+      "number": 22,
+      "team": "Racing Bulls",
+      "color": "#6C98FF"
     }
   ]
 }
