@@ -2,8 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-08-23T07:03:32.411Z",
-  "completedSessionCount": 65,
+  "updatedAt": "2026-08-23T18:49:48.586Z",
+  "completedSessionCount": 66,
   "sessions": [
     {
       "id": "11465",
@@ -795,7 +795,7 @@
       "country": "Netherlands",
       "dateStart": "2026-08-23T13:00:00+00:00",
       "dateEnd": "2026-08-23T15:00:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11354",
