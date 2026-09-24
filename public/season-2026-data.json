@@ -2,8 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-09-24T04:57:10.516Z",
-  "completedSessionCount": 76,
+  "updatedAt": "2026-09-24T17:15:08.105Z",
+  "completedSessionCount": 78,
   "sessions": [
     {
       "id": "11465",
@@ -927,7 +927,7 @@
       "country": "Azerbaijan",
       "dateStart": "2026-09-24T08:30:00+00:00",
       "dateEnd": "2026-09-24T09:30:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11371",
@@ -939,7 +939,7 @@
       "country": "Azerbaijan",
       "dateStart": "2026-09-24T12:00:00+00:00",
       "dateEnd": "2026-09-24T13:00:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11372",
@@ -1463,6 +1463,13 @@
       "color": "#00D7B6"
     },
     {
+      "id": "HAD",
+      "name": "Isack Hadjar",
+      "number": 6,
+      "team": "Red Bull Racing",
+      "color": "#4781D7"
+    },
+    {
       "id": "ANT",
       "name": "Kimi Antonelli",
       "number": 12,
@@ -1494,8 +1501,8 @@
       "id": "LAW",
       "name": "Liam Lawson",
       "number": 30,
-      "team": "Red Bull Racing",
-      "color": "#4781D7"
+      "team": "Racing Bulls",
+      "color": "#6C98FF"
     },
     {
       "id": "VER",
@@ -1545,13 +1552,6 @@
       "number": 77,
       "team": "Cadillac",
       "color": "#909090"
-    },
-    {
-      "id": "TSU",
-      "name": "Yuki Tsunoda",
-      "number": 22,
-      "team": "Racing Bulls",
-      "color": "#6C98FF"
     }
   ]
 }
