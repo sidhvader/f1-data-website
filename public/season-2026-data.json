@@ -2,8 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-10-09T06:14:31.304Z",
-  "completedSessionCount": 81,
+  "updatedAt": "2026-10-09T22:41:38.645Z",
+  "completedSessionCount": 83,
   "sessions": [
     {
       "id": "11465",
@@ -987,7 +987,7 @@
       "country": "Singapore",
       "dateStart": "2026-10-09T08:30:00+00:00",
       "dateEnd": "2026-10-09T09:30:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11379",
@@ -999,7 +999,7 @@
       "country": "Singapore",
       "dateStart": "2026-10-09T12:30:00+00:00",
       "dateEnd": "2026-10-09T13:14:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11383",
