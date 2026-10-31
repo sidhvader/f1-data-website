@@ -2,8 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-10-30T13:01:22.836Z",
-  "completedSessionCount": 91,
+  "updatedAt": "2026-10-31T05:50:37.817Z",
+  "completedSessionCount": 93,
   "sessions": [
     {
       "id": "11465",
@@ -1107,7 +1107,7 @@
       "country": "Mexico",
       "dateStart": "2026-10-30T18:30:00+00:00",
       "dateEnd": "2026-10-30T19:30:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11398",
@@ -1119,7 +1119,7 @@
       "country": "Mexico",
       "dateStart": "2026-10-30T22:00:00+00:00",
       "dateEnd": "2026-10-30T23:00:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11399",
