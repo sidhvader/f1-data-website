@@ -2,8 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-11-01T13:36:55.227Z",
-  "completedSessionCount": 95,
+  "updatedAt": "2026-11-02T06:14:38.571Z",
+  "completedSessionCount": 96,
   "sessions": [
     {
       "id": "11465",
@@ -1154,8 +1154,8 @@
       "location": "Mexico City",
       "country": "Mexico",
       "dateStart": "2026-11-01T20:00:00+00:00",
-      "dateEnd": "2026-11-01T22:00:00+00:00",
-      "status": "scheduled"
+      "dateEnd": "2026-11-01T23:00:00+00:00",
+      "status": "completed"
     },
     {
       "id": "11405",
@@ -1536,8 +1536,8 @@
       "id": "HIR",
       "name": "Ryo Hirakawa",
       "number": 50,
-      "team": "Haas F1 Team",
-      "color": "#9C9FA2"
+      "team": "Unknown team",
+      "color": "#d6d9df"
     },
     {
       "id": "PER",
