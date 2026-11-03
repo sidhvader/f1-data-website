@@ -2,7 +2,7 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-11-02T16:16:54.368Z",
+  "updatedAt": "2026-11-03T01:01:26.456Z",
   "completedSessionCount": 96,
   "sessions": [
     {
@@ -1536,8 +1536,8 @@
       "id": "HIR",
       "name": "Ryo Hirakawa",
       "number": 50,
-      "team": "Unknown team",
-      "color": "#d6d9df"
+      "team": "Haas F1 Team",
+      "color": "#9C9FA2"
     },
     {
       "id": "PER",
