@@ -2,8 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-11-06T06:54:09.747Z",
-  "completedSessionCount": 96,
+  "updatedAt": "2026-11-07T06:04:29.454Z",
+  "completedSessionCount": 98,
   "sessions": [
     {
       "id": "11465",
@@ -1167,7 +1167,7 @@
       "country": "Brazil",
       "dateStart": "2026-11-06T15:30:00+00:00",
       "dateEnd": "2026-11-06T16:30:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11406",
@@ -1179,7 +1179,7 @@
       "country": "Brazil",
       "dateStart": "2026-11-06T19:00:00+00:00",
       "dateEnd": "2026-11-06T20:00:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11407",
@@ -1533,9 +1533,9 @@
       "color": "#00A1E8"
     },
     {
-      "id": "HIR",
-      "name": "Ryo Hirakawa",
-      "number": 50,
+      "id": "CAM",
+      "name": "Rafael Câmara",
+      "number": 51,
       "team": "Haas F1 Team",
       "color": "#9C9FA2"
     },
