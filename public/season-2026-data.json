@@ -2,8 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-11-19T20:42:25.541Z",
-  "completedSessionCount": 101,
+  "updatedAt": "2026-11-20T07:23:12.837Z",
+  "completedSessionCount": 103,
   "sessions": [
     {
       "id": "11465",
@@ -1227,7 +1227,7 @@
       "country": "United States",
       "dateStart": "2026-11-20T00:30:00+00:00",
       "dateEnd": "2026-11-20T01:30:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11414",
@@ -1239,7 +1239,7 @@
       "country": "United States",
       "dateStart": "2026-11-20T04:00:00+00:00",
       "dateEnd": "2026-11-20T05:00:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11415",
@@ -1534,7 +1534,7 @@
     },
     {
       "id": "CAM",
-      "name": "Rafael Câmara",
+      "name": "Rafael Camara",
       "number": 51,
       "team": "Haas F1 Team",
       "color": "#9C9FA2"
