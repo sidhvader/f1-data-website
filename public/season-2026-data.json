@@ -2,8 +2,8 @@
   "season": 2026,
   "source": "OpenF1",
   "sourceUrl": "https://api.openf1.org/v1",
-  "updatedAt": "2026-11-20T20:26:55.501Z",
-  "completedSessionCount": 103,
+  "updatedAt": "2026-11-21T07:16:25.047Z",
+  "completedSessionCount": 105,
   "sessions": [
     {
       "id": "11465",
@@ -1251,7 +1251,7 @@
       "country": "United States",
       "dateStart": "2026-11-21T00:30:00+00:00",
       "dateEnd": "2026-11-21T01:30:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11416",
@@ -1263,7 +1263,7 @@
       "country": "United States",
       "dateStart": "2026-11-21T04:00:00+00:00",
       "dateEnd": "2026-11-21T05:00:00+00:00",
-      "status": "scheduled"
+      "status": "completed"
     },
     {
       "id": "11420",
